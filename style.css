@@ -1,0 +1,183 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f8f4f0;
+    color: #262626;
+}
+.container {
+    max-width: 1040px;
+    margin: auto;
+    padding: 40px 16px;
+}
+header.hero {
+    background: linear-gradient(90deg,#f2e8df 50%, #e9e4dc 100%);
+    border-bottom: 2px solid #e2ded9;
+    text-align: center;
+    padding: 100px 20px 80px 20px;
+    animation: fadein 1.2s;
+}
+header .cta-button {
+    margin-top: 28px;
+    font-size: 1.1rem;
+}
+h1 {
+    font-size: 2.1rem;
+    margin-bottom: 16px;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 22px;
+    letter-spacing: -.5px;
+}
+ul, ol { font-size: 1rem; }
+.profile-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(190,170,120,0.18);
+    margin-right: 36px;
+    border: 2px solid #ede5db;
+}
+.about-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+@media (max-width:700px) {
+    .about-flex { flex-direction: column; align-items: center; }
+    .profile-img { margin: 0 0 24px 0; }
+}
+.why-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.why-block {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(150,130,90,0.08);
+    padding: 22px 26px;
+    font-size: 1rem;
+    flex: 1 1 210px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 160px;
+    animation: fadein 1s;
+}
+.why-block span { font-size: 1.5rem; }
+.reel-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+}
+.reel-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(190,170,120,0.09);
+    padding: 18px 18px 16px 18px;
+    min-width: 220px;
+    max-width: 250px;
+    flex: 1 1 220px;
+    text-align: center;
+    transition: box-shadow .3s, transform .2s;
+    animation: fadeinup .8s;
+}
+.reel-card img {
+    width: 100%;
+    height: 148px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+.reel-card button {
+    background: #e36b51;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background .25s;
+}
+.reel-card button:hover { background: #b54325; }
+.reviews-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.review {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(160,130,90,0.10);
+    padding: 18px 24px 14px 18px;
+    flex: 1 1 350px;
+    min-width: 240px;
+    animation: fadein 1s;
+}
+.review img {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(140,110,60,0.09);
+    padding: 24px 22px 16px 22px;
+    flex: 1 1 210px;
+    min-width: 200px;
+    text-align: center;
+    animation: fadeinup 1s;
+}
+.price { font-size: 1.5rem; font-weight: 700; margin: 12px 0; }
+.card ul { text-align: left; margin: 0 0 16px 0; }
+.cta-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 14px 30px;
+    background: #222;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+    transition: background 0.2s, transform 0.2s;
+    border: none; cursor: pointer;
+}
+.cta-button:hover { background: #404040; transform: translateY(-2px) scale(1.03);}
+input[type="text"] {
+    width: 90%; max-width: 380px;
+    padding: 12px 12px;
+    border-radius: 11px;
+    border: 1.5px solid #d6cdc0;
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+form { display: flex; flex-direction: column; align-items: flex-start;}
+@media (max-width:850px) {
+    .reel-grid, .pricing-cards, .why-list, .reviews-list { flex-direction: column; }
+}
+footer {
+    background: #eee8df;
+    color: #666;
+    text-align: center;
+    padding: 28px 10px;
+    font-size: 15px;
+}
+.footer-flex { display: flex; justify-content: space-between; align-items: center;}
+@media (max-width: 700px) { .footer-flex { flex-direction: column; gap: 10px;} }
+@keyframes fadein { from {opacity:0;} to {opacity:1;} }
+@keyframes fadeinup { from {opacity:0;transform:translateY(40px);} to {opacity:1;transform:translateY(0);} }
